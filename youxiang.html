@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+		邮箱：<input type="text" onblur="checkMobile(this)" />
+			<span id="tip"></span>
+		<script language="JavaScript">
+
+		function checkMobile(input) {
+   			var mobile_number = input.value;
+    		var mobile_rule =/^\w{6,12}\@(qq|163|sina|126).com$/;
+  			var tip = document.getElementById("tip");
+    			if(mobile_number.match(mobile_rule) == null){
+       			 tip.innerHTML = "请输入正确的邮箱！";
+      			  return false;
+   				 } else {
+      			  tip.innerHTML = "输入正确";
+   				 }
+				}
+
+		</script>
+
+</body>
+</html>
